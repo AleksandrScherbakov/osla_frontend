@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Dropdown, {DropdownTrigger, DropdownContent} from "./Dropdown/index";
+import {Component1, Component2, Component3} from "./components/index";
+import {Trigger1, Trigger2, Trigger3} from "./triggers/index";
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Dropdown>
+            <DropdownTrigger>
+                <Trigger1/>
+            </DropdownTrigger>
+            <DropdownContent>
+                <Component1/>
+            </DropdownContent>
+        </Dropdown>
+        <Dropdown>
+            <DropdownTrigger>
+                <Trigger2/>
+            </DropdownTrigger>
+            <DropdownContent>
+                <Component2/>
+            </DropdownContent>
+        </Dropdown>
+        <Dropdown>
+            <DropdownTrigger>
+                <Trigger3/>
+            </DropdownTrigger>
+            <DropdownContent>
+                <Component3/>
+            </DropdownContent>
+        </Dropdown>
     </div>
   );
 }
